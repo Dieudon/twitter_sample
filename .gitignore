@@ -14,4 +14,5 @@
 /log/*.log
 /tmp
 
-/.secret
+.secret
+.DS_Store
