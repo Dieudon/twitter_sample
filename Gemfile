@@ -22,7 +22,6 @@ end
 
 gem 'jquery-rails'
 
-
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
 end
@@ -45,6 +44,7 @@ group :production do
 end
 
 gem 'bootstrap-sass', '2.3.2.0'
+gem 'bcrypt-ruby', '3.0.1'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
