@@ -29,6 +29,7 @@ end
 group :test do
   gem 'selenium-webdriver', '2.0.0'
   gem 'capybara', '2.1.0'
+  gem 'factory_girl_rails', '4.2.1'
 end
 
 gem 'turbolinks', '1.1.1'
@@ -45,6 +46,7 @@ end
 
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'bcrypt-ruby', '3.0.1'
+gem "strong_parameters"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
