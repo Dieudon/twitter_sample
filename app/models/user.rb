@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessible :email, :name, :password_digest, :password, :password_confirmation, :authenticate
+  has_many :microposts, dependent: :destroy
   
   validates :name, presence: true, length: { maximum: 50 }
   
@@ -14,6 +15,11 @@ class User < ActiveRecord::Base
   
   validates :password_confirmation, presence: true
   after_validation { self.errors.messages.delete(:password_digest) }
+  
+  def feed
+    # This is preliminary. See "Following users" for the full implementation.
+    Micropost.where("user_id = ?", id)
+  end
   
   private
 
